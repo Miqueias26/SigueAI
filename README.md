@@ -31,6 +31,9 @@
 ## 🛠 Instalación
 
 ### 1. Clonar el Repositorio
+
 Clona este repositorio en tu máquina local utilizando Git:
+
 ```bash
 git clone https://github.com/tu-usuario/sigue-ai.git
+```
