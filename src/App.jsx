@@ -8,6 +8,9 @@ function App() {
       <div className="flex justify-center bg-red-700 text-white">
         <img src={src} alt={alt} />
         <p>{alt}</p>
+        <p>test 1</p>
+        <p>test 2</p>
+        <p>test 3</p>
       </div>
     </>
   );
