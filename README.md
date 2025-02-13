@@ -1,4 +1,4 @@
-# ![Logo de Sigue-Ai](src/assets/images/oficial_logo.png) - Inteligencia Artificial para la Prevención del Suicidio
+# SigueAi - Inteligencia Artificial para la Prevención del Suicidio
 
 **Sigue-Ai** es una aplicación web basada en React que utiliza inteligencia artificial para la prevención del suicidio, proporcionando apoyo emocional y recursos en situaciones de crisis.
 
