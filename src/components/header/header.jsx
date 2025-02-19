@@ -4,6 +4,10 @@ import { IoMdClose } from "react-icons/io";
 import { MdOutlineAddIcCall } from "react-icons/md";
 import images from "../../assets/images/imagedata";
 
+{
+  /*Las importaciones possuen useState para deteccion de cambios en  navbar, icons y el logo princial */
+}
+
 const Header = () => {
   const { src, title } = images.image_logo;
   const [navbar, setNavbar] = useState(false);
