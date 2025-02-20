@@ -1,6 +1,7 @@
 import "./App.css";
-import Header from "./components/header/Header";
-import Hero from "./components/header/Hero";
+import ContainerMain from "./components/containerMain/ContainerMain";
+import Header from "./components/header/header";
+import Hero from "./components/hero/Hero";
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
       </div>
       <div>
         <Hero />
+      </div>
+      <div>
+        <ContainerMain />
       </div>
     </>
   );

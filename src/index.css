@@ -1,6 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes mover {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-move {
+    animation: mover 30s linear infinite;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

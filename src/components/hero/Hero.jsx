@@ -17,12 +17,12 @@ import UseMotion from "../../helful/UseMotion";
 const Hero = () => {
   const { src, title } = Images.image1;
   return (
-    <div className="!px-8">
+    <div className="!px-8 ">
       {/* acima div de estructuración external */}
       {/*abajo div parent flex */}
       <div
         style={{ background: "linear-gradient(45deg, #C8C8C8, #2B2B2B)" }}
-        className=" flex h-[72vh] items-center p-5 rounded-3xl bg-gradient-to-b from-gray-400 to-gray-900 "
+        className="flex flex-col h-[119vh] md:flex-row md:h-[72vh] md:items-center md:p-5 rounded-3xl md:bg-gradient-to-b from-gray-400 to-gray-900"
       >
         {/*FrameMotion: Animacion FadeIn aplicada en el childen right  */}
         <UseMotion type="fadeIn">
@@ -34,15 +34,15 @@ const Hero = () => {
         {/*FrameMotion: Animacion FadeIn aplicada en el childen left  */}
         <UseMotion>
           {/*Childen left con titulo h1, parafo p y section flex con dos buttons  */}
-          <aside className="flex-col justify-center !pl-[30vh] items-center text-left ">
+          <aside className="md:justify-center md:!pl-[30vh] md:items-center md:text-left">
             {/*TITULO */}
-            <h1 className="text-white font-medium text-[2.4rem] !pb-3">
+            <h1 className="text-white font-medium text-[2.4rem] text-center r !pb-3 md:items-left md:text-left">
               Llámanos o escríbenos
               <br />
               cuando quieras
             </h1>
             {/*PARAFO*/}
-            <p className="text-white text-[1rem] !pb-12">
+            <p className="text-white text-[1rem] !pb-12 text-center  md:text-left md:items-left">
               Serás escuchado y comprendido, ya as dado el primer <br /> paso y
               has llegado hasta aquí. <strong>SigueAI</strong> es una
               inteligencia <br />
@@ -50,7 +50,7 @@ const Hero = () => {
               de vivir es una increíble demostración de coraje.
             </p>
             {/*SECTION FLEX*/}
-            <section className="flex gap-4">
+            <section className="flex flex-col md:flex-row text-center items-center gap-4">
               {/*LINK1 LLAMAR*/}
               <a
                 href="tel:+5511999999999"

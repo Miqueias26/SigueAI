@@ -1,9 +1,11 @@
 import sigueAi_logo from "./sigueAi_logo.png"
 import image1 from "./image01.png"
 import image2 from "./image02.png"
-import image3 from "./image03jpg.jpg"
+import image3 from "./image_extra_101.png"
 import image4 from "./image04.jpg"
 import image5 from "./image05.jpg"
+import videoA from "./video_oficial.mp4"
+
 
 const Images = {
  image_logo: {id: 'image_logo', src:sigueAi_logo, title:"logo oficial"},
@@ -12,6 +14,8 @@ const Images = {
  image3: {id: 'img3', src: image3, title: "image 3"},
  image4: {id: 'img4', src: image4, title: "image 4"},
  image5: {id: 'img5', src: image5, title: "image 5"},
+ videoA: {id: 'vdA', src: videoA, title: "video A"}
+
 }
 
 export default Images;
