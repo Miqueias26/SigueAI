@@ -9,30 +9,35 @@ import UseMotion from "../../helful/UseMotion";
 }
 
 const ContainerMain = () => {
-  const { src, title } = Images.image3;
+  const { src, title } = Images.image2;
   return (
-    <div>
+    <div className="" id="dialogar">
       {/*DIV ACIMA SOLO DE COMPARTIMENTO*/}
       <UseMotion type="fadeIn">
         {/*PARENT */}
-        <div className="!px-8 !py-8 flex flex-col md:flex-row">
+        <div className="!px-8 !py-7 flex flex-col md:flex-row">
           {/*MAIN CONTENIDO PRICIPAL DE LA WEB, DONDE APORTARA EL CHAT*/}
           <main>
-            {/*SECTION CON TITLE Y SUB-TITLE*/}
-            <section>
-              <h1 className="text-[44px] text-center !pb-4 md:text-left">
-                <strong className="text-[#FFE70E]">Iniciar</strong> dialogo
-              </h1>
-              <p className="text-[1rem] text-center md:text-left">
-                Aparte de nuestro <strong>chatAI</strong>, dejamos los <br />
-                principales teléfonos disponibles para tu <br /> comodidad y
-                bienestar.
+            {/*SECTION Y SUBSECTION CON SPAN TITLE Y SUB-TITLE*/}
+            <section className="text-center md:text-left ">
+              <section className=" flex !gap-2 text-center justify-center md:justify-normal">
+                <span className="text-[#FFE70E] text-[3rem] text-center md:text-left md:text-[3.5rem]">
+                  Iniciar
+                </span>
+                <span className="text-[3rem] text-center md:text-left md:text-[3.5rem]">
+                  dialogo
+                </span>
+              </section>
+
+              <p className="text-[1rem] text-center md:text-left font-light md:text-[1.2rem]">
+                Aparte de nuestro chatAI, dejamos los <br /> principales
+                teléfonos disponibles para <br /> tu comodidad y bienestar.
               </p>
             </section>
             {/*SECTION CON BUTTON PARA EMPEZAR EL CHAT*/}
 
             <section className="text-center">
-              <button className="md:!mt-34 md:!px-4.5 md:!py-1 md:!ml-40 d:flex !mt-10 !ml-8 !px-4 !py-2 flex gap-4 items-center font-medium bg-[#FFE70E] rounded-2xl hover:bg-black hover:text-white transition">
+              <button className="md:!mt-30 md:!px-4.5 md:!py-1 md:!ml-40 d:flex !mt-10 !ml-8 !px-4 !py-2 flex gap-4 items-center font-medium bg-[#FFE70E] rounded-2xl hover:bg-black hover:text-white transition">
                 Comenzar conversación
                 <BsChatLeftText />
               </button>
@@ -47,7 +52,7 @@ const ContainerMain = () => {
 
         {/*SECTION CON CARROUSEL */}
         <section className=" w-full overflow-hidden !px-4 !py-4 bg-[#FFE70E] !mb-4 ">
-          <span className="font-bold inline-block whitespace-nowrap animate-move">
+          <span className="font-bold inline-block whitespace-nowrap animate-move ">
             Abrirse es un gran paso hacia el bienestar emocional,&nbsp;&nbsp;
             <a href="#" className="font-bold text-white">
               llama 024 &nbsp;&nbsp;

@@ -17,7 +17,7 @@ import UseMotion from "../../helful/UseMotion";
 const Hero = () => {
   const { src, title } = Images.image1;
   return (
-    <div className="!px-8 ">
+    <div className="md:!px-8 ">
       {/* acima div de estructuración external */}
       {/*abajo div parent flex */}
       <div
@@ -34,27 +34,34 @@ const Hero = () => {
         {/*FrameMotion: Animacion FadeIn aplicada en el childen left  */}
         <UseMotion>
           {/*Childen left con titulo h1, parafo p y section flex con dos buttons  */}
-          <aside className="md:justify-center md:!pl-[30vh] md:items-center md:text-left">
+          <aside className="!px-4 md:justify-center md:!pl-[30vh] md:items-center md:text-left">
             {/*TITULO */}
-            <h1 className="text-white font-medium text-[2.4rem] text-center r !pb-3 md:items-left md:text-left">
-              Llámanos o escríbenos
+            <h1 className="text-white text-[2rem] font-medium text-center !py-3 md:items-left md:text-left md:text-[2.4rem]">
+              llámanos o escríbenos
               <br />
               cuando quieras
             </h1>
             {/*PARAFO*/}
-            <p className="text-white text-[1rem] !pb-12 text-center  md:text-left md:items-left">
-              Serás escuchado y comprendido, ya as dado el primer <br /> paso y
-              has llegado hasta aquí. <strong>SigueAI</strong> es una
-              inteligencia <br />
-              artificial que pretende ayudarte en esta misión, el acto <br />
-              de vivir es una increíble demostración de coraje.
+            <p className="text-white text-[1rem] flex-col !pb-12 font-light text-center md:text-left md:items-left">
+              <span className="md:block">
+                Serás escuchado y comprendido, ya as dado el primer
+              </span>
+              <span className="md:block">
+                paso y has llegado hasta aquí. SigueAI es una inteligencia
+              </span>
+              <span className="md:block">
+                artificial que pretende ayudarte en esta misión, el acto
+              </span>
+              <span className="md:block">
+                de vivir es una increíble demostración de coraje.
+              </span>
             </p>
             {/*SECTION FLEX*/}
             <section className="flex flex-col md:flex-row text-center items-center gap-4">
               {/*LINK1 LLAMAR*/}
               <a
                 href="tel:+5511999999999"
-                className="flex w-[35%] items-center gap-2 bg-[#FFE70E] !px-4.5 !py-1 rounded-2xl hover:bg-black hover:text-white transition"
+                className="flex  items-center gap-2 bg-[#FFE70E] !px-4.5 !py-1 rounded-2xl hover:bg-black hover:text-white transition"
               >
                 <span className="">llamar</span>
                 <strong className="text-white">024</strong>
@@ -62,8 +69,8 @@ const Hero = () => {
               </a>
               {/*LINK2 DIALOGAR*/}
               <a
-                href="tel:+5511999999999"
-                className="flex w-[30%] gap-2 bg-white !px-4.5 !py-1 rounded-2xl hover:bg-black hover:text-white transition"
+                href="#dialogar"
+                className="flex  gap-2 bg-white !px-4.5 !py-1 rounded-2xl hover:bg-black hover:text-white transition"
               >
                 <span className="">Dialogar</span>
                 <BsChatLeftText size={16} />

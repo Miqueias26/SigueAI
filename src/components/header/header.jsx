@@ -33,7 +33,7 @@ const Header = () => {
               </a>
             </li>
             <li className="p-3 !pb-1 hover:bg-[#FFE70E] hover:underline decoration-2 decoration-[#FFE70E] md:hover:bg-transparent">
-              <a href="#" className="font-light">
+              <a href="#dialogar" className="font-light">
                 Dialogar
               </a>
             </li>
