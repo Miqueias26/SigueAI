@@ -14,21 +14,21 @@ const Header = () => {
 
   return (
     <nav className="">
-      <div className=" max-w-7xl mx-auto flex justify-between items-center ">
+      <div className="max-w-7xl mx-auto flex justify-between items-center md:bg-transparent bg-gray-200 ">
         {/* AQUI ESTA LA LOGO */}
         <a href="#">
           <img src={src} alt={title} className="w-[150px]" />
         </a>
 
         {/* AQUI ESTA EL MENU DE NAVEGACION  Y LINKS*/}
-        <div className=" flex-1 flex justify-center">
+        <div className=" flex-1 flex justify-center md:bg-transparent ">
           <ul
             className={`absolute gap-14 md:static text-center top-30 left-0 w-full md:bg-transparent transition-all duration-300 ${
               navbar ? "block" : "hidden"
-            } bg-gray-300 !pb-6  md:flex md:justify-center md:space-x-6`}
+            } bg-gray-200 !pb-6 md:flex md:justify-center md:space-x-6`}
           >
             <li className="p-3 !pb-1 hover:bg-[#FFE70E] hover:underline decoration-2 decoration-[#FFE70E] md:hover:bg-transparent">
-              <a href="#" className="font-light">
+              <a href="/" className="font-light">
                 Home
               </a>
             </li>
@@ -38,12 +38,12 @@ const Header = () => {
               </a>
             </li>
             <li className="p-3 !pb-1 hover:bg-[#FFE70E] hover:underline decoration-2 decoration-[#FFE70E] md:hover:bg-transparent">
-              <a href="#" className="font-light">
+              <a href="/sobre-nosotros" className="font-light">
                 Sobre Nosotros
               </a>
             </li>
             <li className="p-3 !pb-1 hover:bg-[#FFE70E] hover:underline decoration-2 decoration-[#FFE70E] md:hover:bg-transparent">
-              <a href="#" className="font-light">
+              <a href="/" className="font-light">
                 Contactos
               </a>
             </li>

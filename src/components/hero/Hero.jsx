@@ -36,25 +36,15 @@ const Hero = () => {
           {/*Childen left con titulo h1, parafo p y section flex con dos buttons  */}
           <aside className="!px-4 md:justify-center md:!pl-[30vh] md:items-center md:text-left">
             {/*TITULO */}
-            <h1 className="text-white text-[2rem] font-medium text-center !py-3 md:items-left md:text-left md:text-[2.4rem]">
-              llámanos o escríbenos
-              <br />
-              cuando quieras
+            <h1 className="text-white max-w-sm text-[2rem] font-medium text-center !py-3 md:items-left md:text-left md:text-[2.4rem]">
+              llámanos o escríbenos cuando quieras
             </h1>
             {/*PARAFO*/}
-            <p className="text-white text-[1rem] flex-col !pb-12 font-light text-center md:text-left md:items-left">
-              <span className="md:block">
-                Serás escuchado y comprendido, ya as dado el primer
-              </span>
-              <span className="md:block">
-                paso y has llegado hasta aquí. SigueAI es una inteligencia
-              </span>
-              <span className="md:block">
-                artificial que pretende ayudarte en esta misión, el acto
-              </span>
-              <span className="md:block">
-                de vivir es una increíble demostración de coraje.
-              </span>
+            <p className="text-white max-w-sm text-[1rem] flex-col !pb-12 font-light text-center md:text-left md:items-left">
+              Serás escuchado y comprendido, ya as dado el primer paso y has
+              llegado hasta aquí. <strong>SigueAI</strong> es una inteligencia
+              artificial que pretende ayudarte en esta misión, el acto de vivir
+              es una increíble demostración de coraje.
             </p>
             {/*SECTION FLEX*/}
             <section className="flex flex-col md:flex-row text-center items-center gap-4">

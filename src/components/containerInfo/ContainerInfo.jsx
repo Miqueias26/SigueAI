@@ -40,7 +40,8 @@ const ContainerInfo = () => {
           <section className="flex flex-col justify-center text-center">
             <p className="font-light text-[1.1rem] !pb-6 md:!pb-14">
               Una <strong className="text-[#FFE70E]">AI diseñada </strong>para
-              escuchar, <br /> comprender y guiar con empatía.
+              escuchar
+              <br /> comprender y guiar con empatía.
             </p>
             <img
               src={image4.src}
@@ -51,7 +52,7 @@ const ContainerInfo = () => {
           {/*SECTION 1 CON PARAFO Y IMAGENEN 5 */}
           <section className="flex flex-col justify-center text-center">
             <p className="font-light text-[1.1rem] !pb-6 md:!pb-14">
-              Conversaciones <strong className="text-[#FFE70E]">guiadas</strong>{" "}
+              Conversaciones <strong className="text-[#FFE70E]">guiadas</strong>
               por <br /> inteligencia artificial.
             </p>
             <img

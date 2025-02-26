@@ -29,9 +29,18 @@ const ContainerMain = () => {
                 </span>
               </section>
 
-              <p className="text-[1rem] text-center md:text-left font-light md:text-[1.2rem]">
-                Aparte de nuestro chatAI, dejamos los <br /> principales
-                teléfonos disponibles para <br /> tu comodidad y bienestar.
+              <p className="text-[1rem] max-w-sm text-center md:text-left font-light md:text-[1rem] leading-relaxed tracking-wide ">
+                Además de nuestro <strong>ChatAI</strong>, ponemos a tu
+                disposición los principales teléfonos de ayuda emocional y
+                prevención del suicidio.
+              </p>
+              <p className="!pt-2 text-[0.9rem]">
+                <a
+                  href=""
+                  className="underline decoration-[#FFE70E] font-extralight hover:decoration-gray-300 hover:text-[#FFE70E]"
+                >
+                  Saber más
+                </a>
               </p>
             </section>
             {/*SECTION CON BUTTON PARA EMPEZAR EL CHAT*/}
@@ -52,18 +61,18 @@ const ContainerMain = () => {
 
         {/*SECTION CON CARROUSEL */}
         <section className=" w-full overflow-hidden !px-4 !py-4 bg-[#FFE70E] !mb-4 ">
-          <span className="font-bold inline-block whitespace-nowrap animate-move ">
+          <span className="font-medium inline-block whitespace-nowrap animate-move ">
             Abrirse es un gran paso hacia el bienestar emocional,&nbsp;&nbsp;
             <a href="#" className="font-bold text-white">
               llama 024 &nbsp;&nbsp;
             </a>
-            Abrirse es un gran paso hacia el bienestar emocional,&nbsp;&nbsp;
+            Tu voz importa. Compartir es empezar a sanar,&nbsp;&nbsp;
             <a href="#" className="font-bold text-white">
-              llama 024 &nbsp; &nbsp;
+              llama 717 003 717 &nbsp; &nbsp;
             </a>
-            Abrirse es un gran paso hacia el bienestar emocional, &nbsp;&nbsp;
+            No guardes lo que pesa en tu corazón. Hablar ayuda, &nbsp;&nbsp;
             <a href="#" className="font-bold text-white">
-              llama 024&nbsp;&nbsp;
+              llama 911 385 385&nbsp;&nbsp;
             </a>
           </span>
         </section>
