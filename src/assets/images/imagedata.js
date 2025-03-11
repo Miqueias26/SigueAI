@@ -5,7 +5,6 @@ import image3 from "./image03.jpg"
 import image4 from "./image04.jpg"
 import image5 from "./image05.jpg"
 
-import videoA from "./video_oficial.mp4"
 
 
 const Images = {
@@ -16,7 +15,7 @@ const Images = {
  image4: {id: 'img4', src: image4, title: "image 4"},
  image5: {id: 'img5', src: image5, title: "image 5"},
  image4: {id: 'img4', src: image4, title: "image 4"},
- videoA: {id: 'vdA', src: videoA, title: "video A"}
+
 
 }
 
