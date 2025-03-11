@@ -36,7 +36,7 @@ const SobreNosotros = () => {
             </section>
             {/* Abajo section responsable por el text1*/}
             <section className="!pb-6">
-              <p className="md:w-140 break-all text-center md:text-left">
+              <p className="md:w-145 break-all text-center md:text-left">
                 Nuestro objetivo: Ofrecer acompañamiento empático, basado en la
                 escucha activa y recursos que ayuden a mejorar el bienestar.
               </p>
