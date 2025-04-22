@@ -54,7 +54,7 @@ const Hero = () => {
                 className="flex  items-center gap-2 bg-[#FFE70E] !px-4.5 !py-1 rounded-2xl hover:bg-black hover:text-white transition"
               >
                 <span className="">llamar</span>
-                <strong className="text-white">024</strong>
+                <strong className="text-white hover:text-[#FFE70E]">024</strong>
                 <MdOutlineAddIcCall size={20} />
               </a>
               {/*LINK2 DIALOGAR*/}
