@@ -9,6 +9,7 @@ import SobreNosotros from "./routes/pages/SobreNosotros";
 import Contactos from "./routes/pages/Contactos";
 import PoliticadePrivacidad from "./routes/pages/PoliticadePrivacidad";
 import Header from "./components/header/header";
+import ChatRoute from "./routes/pages/chat";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         />
 
         {/* Ruta para "Sobre Nosotros" */}
+        <Route path="/chat" element={<ChatRoute />} />
         <Route path="/sobre-nosotros" element={<SobreNosotros />} />
         <Route path="/Contactos" element={<Contactos />} />
         <Route
