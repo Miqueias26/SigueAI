@@ -7,22 +7,20 @@ import FormAPI from "../../helful/FormAPI";
 }
 const Contactos = () => {
   return (
-    <div className="md:!px-4 !py-4 md:!py-0">
+    <div className="md:px-4 py-4 md:py-0">
       {/* ACIMA DIV PADRE RESPONSABLE POR LA CAJA PRINCIPAL, ABAJO ANIMACION */}
       <UseMotion type="fadeIn">
         {/* TITLE */}
-        <h1 className="text-center  text-3xl md:text-4xl font-bold  items-center !mb-6">
+        <h1 className="text-center  text-3xl md:text-4xl font-bold  items-center mb-6">
           Canales de Apoyo
         </h1>
         {/* DIV CHILDEN LEFT RESPONSABLE POR LA CAJA EZQUIERDA */}
-        <div className="md:flex w-full md:!px-4 justify-between gap-6">
+        <div className="md:flex w-full md:px-4 justify-between gap-6">
           {/* DIV SUB-CHILDEN LEFT RESPONSABLE POR LOS CONTACTOS */}
-          <aside className="md:w-1/2 flex flex-col text-center md:text-left gap-2 rounded-2xl !px-2 bg-gray-100 md:bg-transparent w-screen">
+          <aside className="md:w-1/2 flex flex-col text-center md:text-left gap-2 rounded-2xl px-2 bg-gray-100 md:bg-transparent w-screen">
             <section>
               {/* SUBTITLE */}
-              <h2 className="font-bold text-2xl !py-6">
-                Teléfonos principales
-              </h2>
+              <h2 className="font-bold text-2xl py-6">Teléfonos principales</h2>
               {/* PÁRAFO PRINCIPAL */}
               <p className="font-light">
                 Estos son los principales contactos disponibles para ayuda
@@ -32,7 +30,7 @@ const Contactos = () => {
               </p>
             </section>
             {/* DIV RESPONSABLE EN MAPEAR LOS LINKS DE CONTACTOS APARTADOS EN 2 SECTIONS */}
-            <div className="!py-4 flex flex-col gap-4 ">
+            <div className="py-4 flex flex-col gap-4 ">
               {/* SECTION1 3 PRIMEROS CONTACTOS */}
               <section className="md:flex justify-between text-center">
                 {[
@@ -40,7 +38,7 @@ const Contactos = () => {
                   { nombre: "Barandilla", telefono: "#911 385 385" },
                   { nombre: "Fundación ANAR", telefono: "#900 202 010" },
                 ].map((item, index) => (
-                  <div key={index} className="!pb-2">
+                  <div key={index} className="pb-2">
                     <p className="font-bold">{item.nombre}</p>
                     <a
                       href={`tel:${item.telefono}`}
@@ -77,7 +75,7 @@ const Contactos = () => {
           </aside>
 
           {/* DIV CHILDEN RIGHT RESPONSABLE POR LA CAJA DERECHA */}
-          <aside className="w-full md:w-1/2 flex flex-col items-center md:mt-0 !mt-14 !px-4 ">
+          <aside className="w-full md:w-1/2 flex flex-col items-center md:mt-0 mt-14 px-4 ">
             <FormAPI />
           </aside>
         </div>

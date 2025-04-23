@@ -73,7 +73,7 @@ export default function FormAPI() {
           <button
             type="submit"
             className="hover:bg-gradient-to-r hover:from-[#070707] hover:to-[#6f6f6f] hover:text-white  bg-gradient-to-r from-[#FFE90E] to-[#FFB731]
-                 !py-2 !px-6 rounded-lg cursor-pointer font-semibold text-sm flex items-center justify-center !gap-2 md:!ml-4 !ml-20"
+                 py-2 px-6 rounded-lg cursor-pointer font-semibold text-sm flex items-center justify-center gap-2 md:ml-4 ml-20"
           >
             <BiMailSend size={20} />
             Enviar reseña
@@ -82,7 +82,7 @@ export default function FormAPI() {
       </form>
       {/* MENSAJE DE RESPUESTA */}
       <span
-        className="!mt-4 text-sm font-medium !px-4 !py-2 rounded-lg text-white absolute top-2 md:top-30 md:right-20 flex gap-4"
+        className="mt-4 text-sm font-medium px-4 py-2 rounded-lg text-white absolute top-2 md:top-30 md:right-20 flex gap-4"
         style={{
           backgroundColor: result.includes("Reseña recibida")
             ? "#10B981"

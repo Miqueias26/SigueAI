@@ -32,17 +32,17 @@ function Chat() {
   };
 
   return (
-    <div className="!px-20">
-      <div className="!h-96 overflow-y-scroll !p-2 border-b border-b-gray-300 bg-gray-100 rounded-t-lg">
+    <div className="px-20">
+      <div className="h-96 overflow-y-scroll p-2 border-b border-b-gray-300 bg-gray-100 rounded-t-lg">
         {messages.map((msg, i) => (
           <div
             key={i}
             className={`flex ${
               msg.sender === "user" ? "justify-end" : "justify-start"
-            } !mb-2`}
+            } mb-2`}
           >
             <div
-              className={`relative max-w-xs !px-4 !py-2 rounded-lg shadow break-words whitespace-pre-wrap 
+              className={`relative max-w-xs px-4 py-2 rounded-lg shadow break-words whitespace-pre-wrap 
             ${
               msg.sender === "user"
                 ? "bg-[#fae635] text-black after:content-[''] after:absolute after:top-3 after:right-[-8px] after:border-8 after:border-transparent after:border-l-[#fae635]"
@@ -67,7 +67,7 @@ function Chat() {
         />
         <button
           onClick={sendMessage}
-          className="hover:bg-gradient-to-r hover:from-[#070707] hover:to-[#6f6f6f] hover:text-white bg-gradient-to-r from-[#FFE90E] to-[#FFB731] text-white !px-2 !py-2"
+          className="hover:bg-gradient-to-r hover:from-[#070707] hover:to-[#6f6f6f] hover:text-white bg-gradient-to-r from-[#FFE90E] to-[#FFB731] text-white px-2 py-2"
         >
           {loading ? "Enviando..." : "Enviar"}
         </button>
