@@ -10,23 +10,16 @@ import UseMotion from "../../helful/UseMotion";
 const ContainerInfo = () => {
   const { image3, image4, image5 } = Images;
   return (
-    <div className="!px-8">
+    <div className="p-8 ">
       <UseMotion type="fadeIn">
         {/*DIV ACIMA SOLO DE COMPARTIMENTO*/}
         {/*SECTION AABAJO RESPONSABLE POR EL TITLE */}
-        <section className="md:!pt-5 flex flex-col md:gap-2 md:flex-row">
-          <span className="text-[3rem] text-center md:text-left text-[#FFE70E] ">
-            Bienestar
-          </span>
-          <span className="text-[2.5rem] text-center md:text-[3rem] md:text-left ">
-            a tu alcance
-          </span>
-        </section>
+
         {/*DIV PARENT AABAJO RESPONSABLE POR LAS 3 SECTIONS CON PARAFO Y IMAGENES */}
-        <div className="flex flex-col justify-center text-center gap-4 !py-10 md:text-left md:justify-between md:flex-row ">
+        <div className="flex flex-col justify-center text-center gap-4 py-10 md:text-left md:justify-between md:flex-row ">
           {/*SECTION 1 CON PARAFO Y IMAGENEN 3  */}
           <section className="flex flex-col justify-center text-center">
-            <p className="font-light text-[1.1rem] !pb-6 md:!pb-14">
+            <p className="font-light text-[1.1rem] pb-6 md:pb-14">
               Una <strong className="text-[#FFE70E]">landing page </strong>
               diseñada para <br /> ofrecer bienestar emocional.
             </p>
@@ -38,7 +31,7 @@ const ContainerInfo = () => {
           </section>
           {/*SECTION 1 CON PARAFO Y IMAGENEN 4  */}
           <section className="flex flex-col justify-center text-center">
-            <p className="font-light text-[1.1rem] !pb-6 md:!pb-14">
+            <p className="font-light text-[1.1rem] pb-6 md:pb-14">
               Una <strong className="text-[#FFE70E]">AI diseñada </strong>para
               escuchar
               <br /> comprender y guiar con empatía.
@@ -51,7 +44,7 @@ const ContainerInfo = () => {
           </section>
           {/*SECTION 1 CON PARAFO Y IMAGENEN 5 */}
           <section className="flex flex-col justify-center text-center">
-            <p className="font-light text-[1.1rem] !pb-6 md:!pb-14">
+            <p className="font-light text-[1.1rem] pb-6 md:pb-14">
               Conversaciones <strong className="text-[#FFE70E]">guiadas</strong>
               por <br /> inteligencia artificial.
             </p>

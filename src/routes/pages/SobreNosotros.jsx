@@ -10,11 +10,11 @@ import UseMotion from "../../helful/UseMotion";
 
 const SobreNosotros = () => {
   return (
-    <div className="parent !px-8 !pb-12">
+    <div className="parent px-8 pb-12">
       {/*Acima div parent // abajo animacion principal*/}
       <UseMotion type="fadeIn">
         {/* Abajo div responsable por las sections-lines y sectiion-title*/}
-        <div className="!px-8 flex items-center gap-4 justify-center !py-10">
+        <div className="px-8 flex items-center gap-4 justify-center py-10">
           <section className="h-[0.2rem] w-full bg-[#D9D9D9]"></section>
           <section className="font-bold text-[2.4rem] w-full text-center ">
             <h1>Sobre Nosotros</h1>
@@ -26,7 +26,7 @@ const SobreNosotros = () => {
           {/* abajo aside left*/}
           <aside className="left">
             {/* abajo section1-left responsable por el icon y span*/}
-            <section className="flex flex-col md:flex-row items-center gap-4 !pb-6">
+            <section className="flex flex-col md:flex-row items-center gap-4 pb-6">
               <i>
                 <AiFillRead size={40} />
               </i>
@@ -35,14 +35,14 @@ const SobreNosotros = () => {
               </span>
             </section>
             {/* Abajo section responsable por el text1*/}
-            <section className="!pb-6">
+            <section className="pb-6">
               <p className="md:w-145 break-all text-center md:text-left">
                 Nuestro objetivo: Ofrecer acompañamiento empático, basado en la
                 escucha activa y recursos que ayuden a mejorar el bienestar.
               </p>
             </section>
             {/* abajo section2-left responsable por el icon y span*/}
-            <section className="flex flex-col md:flex-row items-center gap-4 !pb-6">
+            <section className="flex flex-col md:flex-row items-center gap-4 pb-6">
               <i>
                 <FaHandshake size={40} />
               </i>
@@ -62,7 +62,7 @@ const SobreNosotros = () => {
           {/* abajo aside right*/}
           <aside className="right ">
             {/* abajo section1-right responsable por el icon y span*/}
-            <section className="flex flex-col md:flex-row items-center gap-4 !pb-6">
+            <section className="flex flex-col md:flex-row items-center gap-4 pb-6">
               <i>
                 <GiWorld size={40} />
               </i>
@@ -71,7 +71,7 @@ const SobreNosotros = () => {
               </span>
             </section>
             {/* Abajo section responsable por el text3*/}
-            <section className="!pb-6">
+            <section className="pb-6">
               <p className="md:w-140 break-all text-center md:text-left">
                 Nuestra visión: Usar inteligencia artificial para acercar el
                 bienestar emocional a más personas, ofreciendo orientación y
@@ -79,7 +79,7 @@ const SobreNosotros = () => {
               </p>
             </section>
             {/* abajo section2-right responsable por el icon y span*/}
-            <section className="flex flex-col md:flex-row items-center gap-4 !pb-6">
+            <section className="flex flex-col md:flex-row items-center gap-4 pb-6">
               <i>
                 <GiReceiveMoney size={40} />
               </i>
@@ -88,7 +88,7 @@ const SobreNosotros = () => {
               </span>
             </section>
             {/* Abajo section responsable por el text4*/}
-            <section className="!pb-6">
+            <section className="pb-6">
               <p className="md:w-140 break-all text-center md:text-left">
                 Nuestros valores: Empatía, accesibilidad, confidencialidad y
                 mejora continua para proporcionar un entorno de apoyo respetuoso

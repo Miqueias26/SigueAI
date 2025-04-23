@@ -9,7 +9,7 @@ import Images from "../../assets/images/imagedata";
 const Footer = () => {
   const { src, title } = Images.image_logo;
   return (
-    <footer className="!px-8">
+    <footer className="px-8">
       <div className="flex flex-col justify-between text-center font-light text-[0.8rem] md:text-[0.9rem] items-center md:flex-row">
         <section>
           {/* LOGO */}
@@ -33,7 +33,7 @@ const Footer = () => {
           </ul>
         </section>
         {/* MENU SOCIALES*/}
-        <section className="!py-4">
+        <section className="py-4">
           <ul className="flex  gap-2 md:gap-6 md:flex-row">
             <li className=" hover:underline decoration-2 decoration-[#FFE70E] md:hover:bg-transparent">
               <a href="https://www.instagram.com/">Instagram</a>
@@ -45,7 +45,7 @@ const Footer = () => {
         </section>
       </div>
       <section className="w-full h-[1px] bg-gray-200"></section>
-      <div className="flex flex-col md:flex-row justify-between text-center text-[0.8rem] !py-4 text-gray-500">
+      <div className="flex flex-col md:flex-row justify-between text-center text-[0.8rem] py-4 text-gray-500">
         <section>
           <p>Copyright &copy; 2025 SigueAI </p>
         </section>
