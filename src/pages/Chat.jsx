@@ -2,7 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-function Chat() {
+const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -17,10 +17,10 @@ function Chat() {
 
     try {
       const response = await axios.post("http://localhost:3000/api/mensagem", {
-        mensagem: input, // Corrigido: nome da propriedade
+        mensagem: input,
       });
 
-      const aiMessage = { sender: "ai", text: response.data.resposta }; // Corrigido: campo do backend
+      const aiMessage = { sender: "ai", text: response.data.resposta };
       setMessages((prev) => [...prev, aiMessage]);
     } catch (error) {
       console.error("Erro ao enviar mensagem:", error);
@@ -74,6 +74,6 @@ function Chat() {
       </div>
     </div>
   );
-}
+};
 
 export default Chat;

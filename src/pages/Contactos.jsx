@@ -1,27 +1,20 @@
 import React from "react";
-import UseMotion from "../../helful/UseMotion";
-import FormAPI from "../../helful/FormAPI";
+import Motion from "../animations/Motion";
+import Web3FormsAPI from "../services/Web3FormsAPI";
 
-{
-  /* las importaciones incluen icon para button y motion para animacion en pantalla */
-}
 const Contactos = () => {
   return (
     <div className="md:px-4 py-4 md:py-0">
-      {/* ACIMA DIV PADRE RESPONSABLE POR LA CAJA PRINCIPAL, ABAJO ANIMACION */}
-      <UseMotion type="fadeIn">
-        {/* TITLE */}
-        <h1 className="text-center  text-3xl md:text-4xl font-bold  items-center mb-6">
+      <Motion type="fadeIn">
+        <h1 className="text-center  text-3xl md:text-4xl font-bold  items-center mb-6 md:pb-8">
           Canales de Apoyo
         </h1>
-        {/* DIV CHILDEN LEFT RESPONSABLE POR LA CAJA EZQUIERDA */}
+
         <div className="md:flex w-full md:px-4 justify-between gap-6">
-          {/* DIV SUB-CHILDEN LEFT RESPONSABLE POR LOS CONTACTOS */}
           <aside className="md:w-1/2 flex flex-col text-center md:text-left gap-2 rounded-2xl px-2 bg-gray-100 md:bg-transparent w-screen">
             <section>
-              {/* SUBTITLE */}
               <h2 className="font-bold text-2xl py-6">Teléfonos principales</h2>
-              {/* PÁRAFO PRINCIPAL */}
+
               <p className="font-light">
                 Estos son los principales contactos disponibles para ayuda
                 inmediata. No dudes en contactar en caso de necesidad. Además,
@@ -29,9 +22,8 @@ const Contactos = () => {
                 <strong className="text-[#FFE70E]"> dejes una reseña.</strong>
               </p>
             </section>
-            {/* DIV RESPONSABLE EN MAPEAR LOS LINKS DE CONTACTOS APARTADOS EN 2 SECTIONS */}
+
             <div className="py-4 flex flex-col gap-4 ">
-              {/* SECTION1 3 PRIMEROS CONTACTOS */}
               <section className="md:flex justify-between text-center">
                 {[
                   { nombre: "Cruz Roja", telefono: "#900 107 917" },
@@ -51,7 +43,7 @@ const Contactos = () => {
                   </div>
                 ))}
               </section>
-              {/* SECTION1 2 ULTIMOS CONTACTOS */}
+
               <section className="md:flex justify-between text-center">
                 {[
                   { nombre: "Generales", telefono: "#024" },
@@ -74,12 +66,11 @@ const Contactos = () => {
             </div>
           </aside>
 
-          {/* DIV CHILDEN RIGHT RESPONSABLE POR LA CAJA DERECHA */}
           <aside className="w-full md:w-1/2 flex flex-col items-center md:mt-0 mt-14 px-4 ">
-            <FormAPI />
+            <Web3FormsAPI />
           </aside>
         </div>
-      </UseMotion>
+      </Motion>
     </div>
   );
 };
