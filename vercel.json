@@ -1,9 +1,18 @@
 {
   "version": 2,
-  "rewrites": [
+  "builds": [
+    { "src": "sigueai-api/api/*.js", "use": "@vercel/node" },
+    { "src": "sigueai-web/package.json", "use": "@vercel/static-build" }
+  ],
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/api/(.*)",
+      "dest": "/sigueai-api/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/sigueai-web/$1",
+      "continue": true
     }
   ]
 }

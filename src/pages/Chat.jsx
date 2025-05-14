@@ -28,9 +28,12 @@ const Chat = () => {
     setInput("");
 
     try {
-      const response = await axios.post("http://localhost:3000/api/mensaje", {
-        mensaje: input,
-      });
+      const response = await axios.post(
+        "https://sigueai.vercel.app/api/mensaje",
+        {
+          mensaje: input,
+        }
+      );
 
       const aiMessage = { sender: "ai", text: response.data.respuesta };
       setMessages((prev) => [...prev, aiMessage]);
