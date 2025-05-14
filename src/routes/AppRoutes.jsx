@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "../components/header/header";
 import Footer from "../components/footer/Footer";
 import Home from "../pages/Home";
-import Chat from "../pages/chat";
+import Chat from "../pages/Chat";
 import SobreNosotros from "../pages/SobreNosotros";
 import Contactos from "../pages/Contactos";
 import PoliticadePrivacidad from "../pages/PoliticadePrivacidad";
@@ -34,6 +34,7 @@ const AppRoutes = () => {
           </>
         }
       />
+
       <Route
         path="/contactos"
         element={
@@ -44,6 +45,7 @@ const AppRoutes = () => {
           </>
         }
       />
+
       <Route
         path="/politica-de-privacidad"
         element={

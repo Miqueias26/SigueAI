@@ -1,75 +1,73 @@
 import React from "react";
-import Motion from "../animations/Motion";
+
+import {
+  RiFacebookLine,
+  RiInstagramLine,
+  RiTwitterLine,
+  RiPhoneLine,
+  RiMailLine,
+} from "react-icons/ri";
 import Web3FormsAPI from "../services/Web3FormsAPI";
+import Motion from "../animations/Motion";
 
 const Contactos = () => {
   return (
-    <div className="md:px-4 py-4 md:py-0">
-      <Motion type="fadeIn">
-        <h1 className="text-center  text-3xl md:text-4xl font-bold  items-center mb-6 md:pb-8">
-          Canales de Apoyo
-        </h1>
+    <div className="flex flex-col md:flex-row justify-center gap-x-40 ">
+      <aside className="p-8">
+        <Motion type="scrollReveal" scroll>
+          <div className="flex-col pb-10 justify-center md:text-left text-center items-center">
+            <section className="flex-col gap-2 text-3xl md:text-3xl pb-2 ">
+              <p className="text-[#FFE70E] flex gap-2">
+                Contactos<p className="text-black">disponibles</p>
+              </p>
 
-        <div className="md:flex w-full md:px-4 justify-between gap-6">
-          <aside className="md:w-1/2 flex flex-col text-center md:text-left gap-2 rounded-2xl px-2 bg-gray-100 md:bg-transparent w-screen">
-            <section>
-              <h2 className="font-bold text-2xl py-6">Teléfonos principales</h2>
-
-              <p className="font-light">
+              <p className="font-extralight text-gray-500 text-sm ">
                 Estos son los principales contactos disponibles para ayuda
-                inmediata. No dudes en contactar en caso de necesidad. Además,
-                te dejamos un formulario para que nos
-                <strong className="text-[#FFE70E]"> dejes una reseña.</strong>
+                inmediata.
               </p>
             </section>
+          </div>
 
-            <div className="py-4 flex flex-col gap-4 ">
-              <section className="md:flex justify-between text-center">
-                {[
-                  { nombre: "Cruz Roja", telefono: "#900 107 917" },
-                  { nombre: "Barandilla", telefono: "#911 385 385" },
-                  { nombre: "Fundación ANAR", telefono: "#900 202 010" },
-                ].map((item, index) => (
-                  <div key={index} className="pb-2">
-                    <p className="font-bold">{item.nombre}</p>
-                    <a
-                      href={`tel:${item.telefono}`}
-                      className="text-[#FFE70E] font-bold transition-all duration-300 ease-in-out 
-             transform hover:scale-110 focus:scale-110"
-                      aria-label={`Llamar a ${item.nombre}`}
-                    >
-                      {item.telefono}
-                    </a>
-                  </div>
-                ))}
-              </section>
-
-              <section className="md:flex justify-between text-center">
-                {[
-                  { nombre: "Generales", telefono: "#024" },
-                  { nombre: "Samaritans", telefono: "#900 525 100" },
-                  { nombre: "La Esperanza", telefono: "#717 003 717" },
-                ].map((item, index) => (
-                  <div key={index} className="pb-2">
-                    <p className="font-bold">{item.nombre}</p>
-                    <a
-                      href={`tel:${item.telefono}`}
-                      className="text-[#FFE70E] font-bold transition-all duration-300 ease-in-out 
-             transform hover:scale-110 focus:scale-110"
-                      aria-label={`Llamar a ${item.nombre}`}
-                    >
-                      {item.telefono}
-                    </a>
-                  </div>
-                ))}
-              </section>
+          <div className="flex flex-col gap-3 pb-20 font-extralight text-black">
+            <div className="flex gap-4 items-center hover:border border-[#FFE70E] rounded-lg p-2">
+              <RiPhoneLine className="text-[#FFE70E]" />
+              <a href="tel:024"> +024 - Atención a la conducta suicida</a>
             </div>
-          </aside>
-
-          <aside className="w-full md:w-1/2 flex flex-col items-center md:mt-0 mt-14 px-4 ">
-            <Web3FormsAPI />
-          </aside>
-        </div>
+            <div className="flex gap-4 items-center hover:border border-[#FFE70E] rounded-lg p-2">
+              <RiPhoneLine className="text-[#FFE70E]" />
+              <a href="tel:900 107 917"> +900 107 917 - Cruz Roja</a>
+            </div>
+            <div className="flex gap-4 items-center hover:border border-[#FFE70E] rounded-lg p-2">
+              <RiPhoneLine className="text-[#FFE70E]" />
+              <a href="tel:717 003 717"> +717 003 717 - Asites</a>
+            </div>
+            <div className="flex gap-4 items-center hover:border border-[#FFE70E] rounded-lg p-2">
+              <RiMailLine className="text-[#FFE70E]" />
+              <a href="mailto:sigueaicontact@gmail.com">
+                Sigueaicontact@gmail.com
+              </a>
+            </div>
+          </div>
+          <div className="flex gap-10 items-center text-center justify-center">
+            <RiFacebookLine
+              size={30}
+              className="hover:bg-gradient-to-r from-[#FFE90E] to-[#FFB731] hover:rounded-full hover:p-2 hover:transition-all hover:duration-300 hover:expand-110"
+            />
+            <RiTwitterLine
+              size={30}
+              className="hover:bg-gradient-to-r from-[#FFE90E] to-[#FFB731] hover:rounded-full hover:p-2 hover:transition-all hover:duration-300 hover:expand-110"
+            />
+            <RiInstagramLine
+              size={30}
+              className="hover:bg-gradient-to-r from-[#FFE90E] to-[#FFB731] hover:rounded-full hover:p-2 hover:transition-all hover:duration-300 hover:expand-110"
+            />
+          </div>
+        </Motion>
+      </aside>
+      <Motion type="scrollReveal" scroll>
+        <aside className="p-8">
+          <Web3FormsAPI />
+        </aside>
       </Motion>
     </div>
   );

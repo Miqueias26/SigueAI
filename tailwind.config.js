@@ -8,6 +8,8 @@ export default {
     extend: {
       animation: {
         move: 'marquee 30s linear infinite',
+     
+        
       },
       keyframes: {
         marquee: {
