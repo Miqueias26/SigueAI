@@ -1,6 +1,6 @@
 # SigueAI - Inteligencia artificial para la ayuda emocional
 
-**Sigue-Ai** es una aplicación web basada en React que utiliza inteligencia artificial para ofrecer ayuda emocional, brindando apoyo y recursos en situaciones de crisis.
+**Sigue-Ai** es una aplicación web basada en React y Node.js que utiliza inteligencia artificial para ofrecer ayuda emocional, brindando apoyo y recursos en situaciones de crisis.
 
 ---
 
@@ -11,15 +11,26 @@
 - **React**: Librería de JavaScript para construir interfaces de usuario.
 - **Vite**: Herramienta de construcción rápida y moderna para aplicaciones frontend.
 - **Tailwind CSS**: Framework de diseño de CSS para una personalización rápida y eficiente.
-- **FontAwesome**: Iconos para mejorar la interfaz de usuario.
+- **FontAwesome / React Icons**: Iconos para mejorar la interfaz de usuario.
 - **React Router DOM**: Para el manejo de rutas en la aplicación.
-- **React Icons**: Para añadir iconos en la interfaz.
 - **Framer Motion**: Para animaciones en React.
+
+### 🧠 **Inteligencia Artificial**
+
+- **OpenAI API**: Utilizada para generar respuestas empáticas y naturales en la conversación con los usuarios.
 
 ### 🎨 **Diseño**
 
 - **Figma**: Herramienta para diseño responsivo de interfaces.
 - **Canva**: Para la generación de imágenes, iconos y logos.
+
+### 🧩 **Backend**
+
+- **Node.js**: Entorno de ejecución para JavaScript en el servidor.
+- **Express**: Framework web minimalista para Node.js.
+- **dotenv**: Para manejar variables de entorno de forma segura.
+- **cors**: Para permitir la comunicación entre el frontend y backend.
+- **OpenAI SDK**: Comunicación con la API de OpenAI.
 
 ### 🔧 **Control de Versiones**
 
