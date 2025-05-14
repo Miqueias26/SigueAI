@@ -1,13 +1,25 @@
 {
   "version": 2,
   "builds": [
-    { "src": "sigueai-api/api/*.js", "use": "@vercel/node" },
-    { "src": "sigueai-web/package.json", "use": "@vercel/static-build" }
+    {
+      "src": "sigueai-api/index.js",
+      "config": {
+        "includeFiles": ["sigueai-api/**/*.js"]
+      }
+    },
+    {
+      "src": "sigueai-web/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist",
+        "cleanUrls": true
+      }
+    }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/sigueai-api/api/$1"
+      "dest": "/sigueai-api/index.js"
     },
     {
       "src": "/(.*)",
