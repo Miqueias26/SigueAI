@@ -23,7 +23,7 @@ const Hero = () => {
       <Motion type="scrollReveal" scroll>
         <section className="w-full overflow-hidden px-4 py-4 bg-[#FFE70E] mb-8">
           <span className="inline-block whitespace-nowrap animate-move font-medium">
-            AAbrirse es un gran paso hacia el bienestar emocional,&nbsp;&nbsp;
+            Abrirse es un gran paso hacia el bienestar emocional,&nbsp;&nbsp;
             <a href="#" className="font-bold text-white">
               llama 024&nbsp;&nbsp;
             </a>
