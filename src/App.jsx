@@ -1,13 +1,13 @@
-// App.jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
-import { BrowserRouter as Router } from "react-router-dom";
+import "./index.css";
 
-function App() {
-  return (
-    <Router>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter basename="/SigueAI">
       <AppRoutes />
-    </Router>
-  );
-}
-
-export default App;
+    </BrowserRouter>
+  </React.StrictMode>
+);
