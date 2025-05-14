@@ -1,19 +1,13 @@
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
-{
-  /*La importacion inclue modulos para animaciones con el Frame-Motion, 
-    estructuracion creada para reutilizacion de animaciones //*/
-}
-
-{
-  /* Constante que almacena los Modelos de animaciones del Motion  */
-}
 const Models = {
   fadeIn: { opacity: 0, y: 50 },
   scaleIn: { opacity: 0, scale: 0.7 },
   rotateIn: { opacity: 0, rotate: -180 },
   slideLeft: { opacity: 0, x: -100 },
   slideRight: { opacity: 0, x: 100 },
+  scrollReveal: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     x: 0,
@@ -25,14 +19,33 @@ const Models = {
   exit: { opacity: 0, y: -50 },
 };
 
-{
-  /*Exportacion de las animaciones */
-}
-const useMotion = ({ children, type = "fadeIn", delay = 0 }) => {
+const useMotion = ({
+  children,
+  type = "fadeIn",
+  delay = 0,
+  scroll = false,
+}) => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -50px 0px" });
+
+  useEffect(() => {
+    if (scroll) {
+      if (isInView) {
+        controls.start("visible");
+      } else {
+        controls.start(type === "scrollReveal" ? "scrollReveal" : type);
+      }
+    }
+  }, [isInView, controls, scroll, type]);
+
   return (
     <motion.div
-      initial={Models[type]}
-      animate="visible"
+      ref={scroll ? ref : null}
+      initial={
+        scroll ? (type === "scrollReveal" ? "scrollReveal" : type) : type
+      }
+      animate={scroll ? controls : "visible"}
       exit="exit"
       variants={Models}
       transition={{ duration: 0.5, delay }}

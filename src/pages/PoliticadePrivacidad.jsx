@@ -3,10 +3,10 @@ import Motion from "../animations/Motion";
 
 const PoliticadePrivacidad = () => {
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center p-4 font-extralight">
       <Motion type="fadeIn">
-        <div className="bg-[#D1D1D1] w-screen">
-          <h1 className=" text-center py-4 text-2xl md:text-3xl font-bold">
+        <div className=" w-screen bg-[#FFE70E]">
+          <h1 className=" text-center py-4 text-2xl md:text-3xl font-bold text-[2.4rem]">
             Política de Privacidad
           </h1>
         </div>
@@ -16,7 +16,7 @@ const PoliticadePrivacidad = () => {
             <span className="font-semibold"> [Marzo de 2025]</span>
           </p>
           <div className="space-y-6 text-left">
-            <h2 className="md:text-2xl font-semibold ">
+            <h2 className="md:text-2xl font-medium">
               1. Información que Recopilamos
             </h2>
             <p className="leading-relaxed">
@@ -39,7 +39,7 @@ const PoliticadePrivacidad = () => {
             </ul>
           </div>
           <div className="space-y-6 text-left">
-            <h2 className="md:text-2xl font-semibold ">
+            <h2 className="md:text-2xl font-medium ">
               2. Uso de la Información
             </h2>
             <p className="leading-relaxed">
@@ -50,7 +50,7 @@ const PoliticadePrivacidad = () => {
           </div>
 
           <div className="space-y-6 text-left">
-            <h2 className="md:text-2xl font-semibold ">
+            <h2 className="md:text-2xl font-medium ">
               3. Protección de tu Información
             </h2>
             <p className="leading-relaxed">
@@ -60,7 +60,7 @@ const PoliticadePrivacidad = () => {
           </div>
 
           <div className="space-y-6 text-left">
-            <h2 className="md:text-2xl font-semibold ">
+            <h2 className="md:text-2xl font-medium ">
               4. Confidencialidad y Anonimato
             </h2>
             <ul className="list-disc pl-8 space-y-2">
@@ -76,7 +76,7 @@ const PoliticadePrivacidad = () => {
           </div>
 
           <div className="space-y-6 text-left">
-            <h2 className="md:text-2xl font-semibold ">
+            <h2 className="md:text-2xl font-medium ">
               5. Limitaciones del Servicio
             </h2>
             <p className="leading-relaxed">
@@ -86,7 +86,7 @@ const PoliticadePrivacidad = () => {
           </div>
 
           <div className="space-y-6 text-left">
-            <h2 className="md:text-2xl font-semibold ">
+            <h2 className="md:text-2xl font-medium ">
               6. Cambios en la Política de Privacidad
             </h2>
             <p className="leading-relaxed">
@@ -95,7 +95,7 @@ const PoliticadePrivacidad = () => {
             </p>
           </div>
           <div className="space-y-6 text-left">
-            <h2 className="md:text-2xl font-semibold ">
+            <h2 className="md:text-2xl font-medium ">
               7. Aceptación de la Política
             </h2>
             <p className="leading-relaxed">
@@ -104,7 +104,7 @@ const PoliticadePrivacidad = () => {
             </p>
           </div>
           <div className="space-y-6 text-left">
-            <h2 className="md:text-2xl font-semibold ">7. Contacto</h2>
+            <h2 className="md:text-2xl font-medium ">8. Contacto</h2>
             <p className="leading-relaxed">
               Si tienes dudas sobre esta Política de Privacidad, puedes
               contactarnos en: <strong>[SigueAIcontact@gmail.com]</strong>
