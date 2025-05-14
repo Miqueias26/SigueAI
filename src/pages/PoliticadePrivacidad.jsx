@@ -5,7 +5,7 @@ const PoliticadePrivacidad = () => {
   return (
     <div className="flex flex-col items-center p-4 font-extralight">
       <Motion type="fadeIn">
-        <div className=" w-screen bg-[#FFE70E]">
+        <div className=" w-screen ">
           <h1 className=" text-center py-4 text-2xl md:text-3xl font-bold text-[2.4rem]">
             Política de Privacidad
           </h1>

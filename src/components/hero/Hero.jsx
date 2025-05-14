@@ -3,13 +3,17 @@ import { IoChatbubbleOutline } from "react-icons/io5";
 import Images from "../../assets/images/imagedata";
 import Motion from "../../animations/Motion";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { ImSpinner2 } from "react-icons/im";
 
 const Hero = () => {
   const { image2, image3, image4, image5 } = Images;
+  const [LoadChat, setLoadChat] = useState(false);
 
   const navigate = useNavigate();
 
   const handleClick = () => {
+    setLoadChat(true);
     setTimeout(() => {
       navigate("/Chat");
     }, 3000);
@@ -115,6 +119,18 @@ const Hero = () => {
             </div>
           </Motion>
         </div>
+        {LoadChat && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="bg-white p-6 rounded-lg max-w-sm mx-auto text-center animate-pulse">
+              <p className="text-gray-600 py-2">
+                Cargando tu espacio de conversación...
+              </p>
+              <div className="flex justify-center">
+                <ImSpinner2 className="animate-spin text-gray-600" />
+              </div>
+            </div>
+          </div>
+        )}
       </Motion>
     </div>
   );
