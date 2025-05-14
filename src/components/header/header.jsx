@@ -146,7 +146,7 @@ const Header = ({ renderVideo = false }) => {
                   onClick={handleNavigate}
                   className="z-10 text-black flex px-4 py-1 gap-2 items-center font-normal bg-[#FFE70E] rounded-3xl hover:bg-black hover:text-white transition"
                 >
-                  Conversara
+                  Conversar
                   <FaArrowRight />
                 </button>
               </div>
