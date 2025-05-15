@@ -11,7 +11,13 @@
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "sigueai-api/index.js" },
-    { "src": "/(.*)", "dest": "sigueai-web/dist/index.html" }
+    {
+      "src": "/api/(.*)",
+      "dest": "sigueai-api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "sigueai-web/dist/index.html"
+    }
   ]
 }
