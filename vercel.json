@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "sigueai-web/dist/$1"
+      "dest": "sigueai-web/dist/index.html"
     }
   ]
 }
