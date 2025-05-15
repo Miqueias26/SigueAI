@@ -1,4 +1,4 @@
-# Logs
+
 logs
 *.log
 npm-debug.log*
@@ -7,9 +7,16 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+
 node_modules
+SigueAI-API/node_modules/
+SigueAI-WEB/node_modules/
+
 dist
 dist-ssr
+SigueAI-WEB/dist/
+
+# Arquivos locais
 *.local
 
 # Editor directories and files
@@ -22,3 +29,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+SigueAI-API/.env
+SigueAI-WEB/.env
