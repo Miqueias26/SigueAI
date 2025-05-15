@@ -3,17 +3,11 @@
   "builds": [
     {
       "src": "sigueai-api/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["sigueai-api/**"]
-      }
+      "use": "@vercel/node"
     },
     {
       "src": "sigueai-web/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "sigueai-web/dist"
-      }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
@@ -23,18 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "sigueai-web/dist/$1",
-      "continue": true
-    },
-    {
-      "src": "/(.*)",
-      "dest": "sigueai-web/dist/index.html"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "dest": "sigueai-web/dist/$1"
     }
   ]
 }
