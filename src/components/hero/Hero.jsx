@@ -106,7 +106,7 @@ const Hero = () => {
 
               <section className="flex flex-col justify-center text-center font-extralight">
                 <p className=" text-[1.1rem] pb-6 md:pb-14">
-                  Conversaciones
+                  Conversacioness
                   <strong className="text-[#FFE70E]"> guiadas </strong>
                   por <br /> inteligencia artificial.
                 </p>
