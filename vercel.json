@@ -1,8 +1,10 @@
 {
+  "buildCommand": "cd SigueAI-WEB && npm install && npm run build",
+  "outputDirectory": "SigueAI-WEB/dist",
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/index.js"
+      "destination": "/SigueAI-API/index.js"
     }
   ]
 }
