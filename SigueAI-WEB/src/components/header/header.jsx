@@ -221,7 +221,7 @@ const Header = ({ renderVideo = false }) => {
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="bg-white p-6 rounded-lg max-w-sm mx-auto text-center animate-pulse">
               <p className="text-gray-600 py-2">
-                Cargando tu espacio de conversación...
+                Cargando tu espacio de conversación..
               </p>
               <div className="flex justify-center">
                 <ImSpinner2 className="animate-spin text-gray-600" />
