@@ -62,7 +62,7 @@ const Header = ({ renderVideo = false }) => {
               className="absolute top-0 left-0 w-full h-full object-cover z-0"
             >
               <source src={backgroundVideo} type="video/webm" />
-              Video indisponible en este momento
+              Video indisponible
             </video>
 
             <div className="max-w-8xl mx-auto flex justify-between items-center md:bg-transparent md:px-6 px-4 py-4">
