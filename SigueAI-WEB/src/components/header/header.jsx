@@ -121,7 +121,7 @@ const Header = ({ renderVideo = false }) => {
               </button>
 
               <button
-                onClick={handleNavigate}
+                onClick={onCall}
                 className="hidden relative z-10 md:flex px-4 py-1 gap-2 items-center text-white font-normal bg-black rounded-3xl hover:bg-[#FFE70E] hover:text-black transition"
               >
                 llamar 024

@@ -17,9 +17,9 @@ const Contactos = () => {
         <Motion type="scrollReveal" scroll>
           <div className="flex-col pb-10 justify-center md:text-left text-center items-center">
             <section className="flex-col gap-2 text-3xl md:text-3xl pb-2 ">
-              <p className="text-[#FFE70E] flex gap-2">
-                Contactos<p className="text-black">disponibles</p>
-              </p>
+              <div className="text-[#FFE70E] flex gap-2 ">
+                <p className="text-black"> Contactos</p> <p>disponibles</p>
+              </div>
 
               <p className="font-extralight text-gray-500 text-sm ">
                 Estos son los principales contactos disponibles para ayuda
