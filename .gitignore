@@ -32,3 +32,4 @@ SigueAI-WEB/dist/
 
 SigueAI-API/.env
 SigueAI-WEB/.env
+.vercel
