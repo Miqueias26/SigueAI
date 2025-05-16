@@ -7,7 +7,7 @@ dotenv.config();
 console.log('OPENAI_API_KEY processed:', process.env.OPENAI_API_KEY ? 'OK' : 'CONNECTION REFUSED');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -88,9 +88,7 @@ app.post('/api/mensaje', async (req, res) => {
   }
 });
 
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => {
-    console.log(`Server working at http://localhost:${PORT}`);
-  });
-}
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
