@@ -9,7 +9,21 @@ console.log('OPENAI_API_KEY processed:', process.env.OPENAI_API_KEY ? 'OK' : 'CO
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+
+const corsOptions = {
+  origin: [
+    'http://localhost:5173',
+    'https://sigue-ai-web.vercel.app'
+  ],
+  methods: ['POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true
+};
+
+
+app.use(cors(corsOptions));
+app.options('/api/mensaje', cors(corsOptions));
+
 app.use(express.json());
 
 const systemPrompt = `
