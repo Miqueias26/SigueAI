@@ -28,10 +28,10 @@ const Chat = () => {
     setInput("");
 
     try {
-      const response = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/mensaje`,
-        { mensaje: input }
-      );
+      const backendURL = import.meta.env.VITE_BACKEND_URL;
+      const response = await axios.post(`${backendURL}/api/mensaje`, {
+        mensaje: input,
+      });
 
       const aiMessage = { sender: "ai", text: response.data.respuesta };
       setMessages((prev) => [...prev, aiMessage]);
