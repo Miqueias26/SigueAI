@@ -1,6 +1,6 @@
 # SigueAI - Inteligencia artificial para la ayuda emocional
 
-**Sigue-Ai** es una aplicación web basada en React y Node.js que utiliza inteligencia artificial para ofrecer ayuda emocional, brindando apoyo y recursos en situaciones de crisis.
+**SigueAI** es una aplicación web basada en React y Node.js que utiliza inteligencia artificial para ofrecer ayuda emocional, brindando apoyo y recursos en situaciones de crisis.
 
 ---
 
