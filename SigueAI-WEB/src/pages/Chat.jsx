@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { PiChatCenteredDots } from "react-icons/pi";
 import { IoSendOutline } from "react-icons/io5";
@@ -7,11 +7,29 @@ import Motion from "../animations/Motion";
 import { useNavigate } from "react-router-dom";
 import { ImSpinner2 } from "react-icons/im";
 
+// Clave para localStorage
+const CHAT_HISTORY_KEY = "sigueAI_chat_history";
+
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [closeChat, setCloseChat] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+
+  // Cargar historial al montar el componente
+  useEffect(() => {
+    const savedHistory = localStorage.getItem(CHAT_HISTORY_KEY);
+    if (savedHistory) {
+      try {
+        const parsedHistory = JSON.parse(savedHistory);
+        setMessages(parsedHistory);
+      } catch (error) {
+        console.error("Error al parsear el historial:", error);
+        localStorage.removeItem(CHAT_HISTORY_KEY);
+      }
+    }
+  }, []);
 
   const handleCloseChat = () => {
     setCloseChat(true);
@@ -20,31 +38,62 @@ const Chat = () => {
     }, 2000);
   };
 
+  // Formatear historial para el backend
+  const formatHistoryForAPI = () => {
+    return messages
+      .filter((msg) => msg.text) // Filtrar mensajes vacíos
+      .map((msg) => ({
+        role: msg.sender === "user" ? "user" : "assistant",
+        content: msg.text,
+      }));
+  };
+
   const sendMessage = async () => {
     if (!input.trim()) return;
 
     const newMessage = { sender: "user", text: input };
-    setMessages([...messages, newMessage]);
+    const updatedMessages = [...messages, newMessage];
+
+    setMessages(updatedMessages);
     setInput("");
+    setIsLoading(true);
 
     try {
       const backendURL = import.meta.env.VITE_BACKEND_URL;
       const response = await axios.post(`${backendURL}/api/mensaje`, {
         mensaje: input,
+        historial: formatHistoryForAPI(),
       });
 
       const aiMessage = { sender: "ai", text: response.data.respuesta };
-      setMessages((prev) => [...prev, aiMessage]);
+      const finalMessages = [...updatedMessages, aiMessage];
+
+      setMessages(finalMessages);
+      // Guardar en localStorage
+      localStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(finalMessages));
     } catch (error) {
-      console.error(
-        "Lo sentimos, ocurrió un error al enviar tu mensaje.",
-        error
-      );
+      console.error("Error al enviar mensaje:", error);
       const errorMessage = {
         sender: "ai",
-        text: "Ups, algo salió mal. Estamos trabajando para solucionarlo.",
+        text: "Ups, algo salió mal. Por favor intenta nuevamente.",
       };
-      setMessages((prev) => [...prev, errorMessage]);
+      const finalMessages = [...updatedMessages, errorMessage];
+      setMessages(finalMessages);
+      localStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(finalMessages));
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Limpiar historial
+  const clearChatHistory = () => {
+    if (
+      window.confirm(
+        "¿Estás seguro de que quieres borrar el historial de conversación?"
+      )
+    ) {
+      setMessages([]);
+      localStorage.removeItem(CHAT_HISTORY_KEY);
     }
   };
 
@@ -63,6 +112,13 @@ const Chat = () => {
             </section>
           </section>
           <section className="flex items-center gap-4">
+            <button
+              onClick={clearChatHistory}
+              className="text-xs text-gray-300 hover:text-white"
+              title="Borrar historial"
+            >
+              Limpiar
+            </button>
             <button onClick={handleCloseChat}>
               <IoIosCloseCircleOutline size={24} color="white" />
             </button>
@@ -71,6 +127,12 @@ const Chat = () => {
 
         <div className="flex-1 overflow-y-auto p-4 bg-gray-100">
           <div className="flex flex-col space-y-3">
+            {messages.length === 0 && (
+              <div className="text-center text-gray-500 py-10">
+                <p>Envía un mensaje para comenzar la conversación</p>
+              </div>
+            )}
+
             {messages.map((msg, i) => (
               <div
                 key={i}
@@ -95,6 +157,18 @@ const Chat = () => {
                 </Motion>
               </div>
             ))}
+
+            {isLoading && (
+              <div className="flex justify-start">
+                <div className="relative max-w-xs md:max-w-md lg:max-w-lg px-4 py-2 rounded-lg shadow bg-white">
+                  <div className="flex space-x-2">
+                    <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"></div>
+                    <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce delay-100"></div>
+                    <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce delay-200"></div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -107,13 +181,18 @@ const Chat = () => {
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               className="flex-1 px-4 py-2 border border-gray-200 focus:outline-none rounded-full font-extralight"
               placeholder="Escribe aquí..."
+              disabled={isLoading}
             />
             <button
               onClick={sendMessage}
               className="p-2 hover:text-[#fae635] transition-colors"
-              disabled={!input.trim()}
+              disabled={!input.trim() || isLoading}
             >
-              <IoSendOutline size={24} />
+              {isLoading ? (
+                <ImSpinner2 className="animate-spin" size={20} />
+              ) : (
+                <IoSendOutline size={24} />
+              )}
             </button>
           </div>
         </div>
