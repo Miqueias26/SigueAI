@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { PiChatCenteredDots } from "react-icons/pi";
 import { IoSendOutline } from "react-icons/io5";
@@ -13,17 +13,6 @@ const Chat = () => {
   const [closeChat, setCloseChat] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const savedMessages = localStorage.getItem("chatMessages");
-    if (savedMessages) {
-      setMessages(JSON.parse(savedMessages));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("chatMessages", JSON.stringify(messages));
-  }, [messages]);
-
   const handleCloseChat = () => {
     setCloseChat(true);
     setTimeout(() => {
@@ -35,18 +24,13 @@ const Chat = () => {
     if (!input.trim()) return;
 
     const newMessage = { sender: "user", text: input };
-    const updatedMessages = [...messages, newMessage];
-    setMessages(updatedMessages);
+    setMessages([...messages, newMessage]);
     setInput("");
 
     try {
       const backendURL = import.meta.env.VITE_BACKEND_URL;
       const response = await axios.post(`${backendURL}/api/mensaje`, {
         mensaje: input,
-        historial: updatedMessages.map((msg) => ({
-          role: msg.sender === "user" ? "user" : "assistant",
-          content: msg.text,
-        })),
       });
 
       const aiMessage = { sender: "ai", text: response.data.respuesta };
@@ -97,11 +81,11 @@ const Chat = () => {
                 <Motion type="fadeIn">
                   <div
                     className={`relative max-w-xs md:max-w-md lg:max-w-lg px-4 py-2 rounded-lg shadow break-words whitespace-pre-wrap 
-                    ${
-                      msg.sender === "user"
-                        ? "bg-[#fae635] text-black after:content-[''] after:absolute after:top-3 after:right-[-8px] after:border-8 after:border-transparent after:border-l-[#fae635]"
-                        : "bg-white text-black before:content-[''] before:absolute before:top-3 before:left-[-8px] before:border-8 before:border-transparent before:border-r-white"
-                    }`}
+                  ${
+                    msg.sender === "user"
+                      ? "bg-[#fae635] text-black after:content-[''] after:absolute after:top-3 after:right-[-8px] after:border-8 after:border-transparent after:border-l-[#fae635]"
+                      : "bg-white text-black before:content-[''] before:absolute before:top-3 before:left-[-8px] before:border-8 before:border-transparent before:border-r-white"
+                  }`}
                   >
                     <strong className="font-semibold text-sm">
                       {msg.sender === "user" ? "Tú" : "SigueAI"}
