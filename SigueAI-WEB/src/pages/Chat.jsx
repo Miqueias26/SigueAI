@@ -7,7 +7,6 @@ import Motion from "../animations/Motion";
 import { useNavigate } from "react-router-dom";
 import { ImSpinner2 } from "react-icons/im";
 
-// Clave para localStorage
 const CHAT_HISTORY_KEY = "sigueAI_chat_history";
 
 const Chat = () => {
@@ -17,7 +16,6 @@ const Chat = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Cargar historial al montar el componente
   useEffect(() => {
     const savedHistory = localStorage.getItem(CHAT_HISTORY_KEY);
     if (savedHistory) {
@@ -38,10 +36,9 @@ const Chat = () => {
     }, 2000);
   };
 
-  // Formatear historial para el backend
   const formatHistoryForAPI = () => {
     return messages
-      .filter((msg) => msg.text) // Filtrar mensajes vacíos
+      .filter((msg) => msg.text)
       .map((msg) => ({
         role: msg.sender === "user" ? "user" : "assistant",
         content: msg.text,
@@ -69,7 +66,6 @@ const Chat = () => {
       const finalMessages = [...updatedMessages, aiMessage];
 
       setMessages(finalMessages);
-      // Guardar en localStorage
       localStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(finalMessages));
     } catch (error) {
       console.error("Error al enviar mensaje:", error);
@@ -85,7 +81,6 @@ const Chat = () => {
     }
   };
 
-  // Limpiar historial
   const clearChatHistory = () => {
     if (
       window.confirm(
@@ -142,12 +137,11 @@ const Chat = () => {
               >
                 <Motion type="fadeIn">
                   <div
-                    className={`relative max-w-xs md:max-w-md lg:max-w-lg px-4 py-2 rounded-lg shadow break-words whitespace-pre-wrap 
-                  ${
-                    msg.sender === "user"
-                      ? "bg-[#fae635] text-black after:content-[''] after:absolute after:top-3 after:right-[-8px] after:border-8 after:border-transparent after:border-l-[#fae635]"
-                      : "bg-white text-black before:content-[''] before:absolute before:top-3 before:left-[-8px] before:border-8 before:border-transparent before:border-r-white"
-                  }`}
+                    className={`relative max-w-xs md:max-w-md lg:max-w-lg px-4 py-2 rounded-lg shadow break-words whitespace-pre-wrap ${
+                      msg.sender === "user"
+                        ? "bg-[#fae635] text-black after:content-[''] after:absolute after:top-3 after:right-[-8px] after:border-8 after:border-transparent after:border-l-[#fae635]"
+                        : "bg-white text-black before:content-[''] before:absolute before:top-3 before:left-[-8px] before:border-8 before:border-transparent before:border-r-white"
+                    }`}
                   >
                     <strong className="font-semibold text-sm">
                       {msg.sender === "user" ? "Tú" : "SigueAI"}
